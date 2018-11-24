@@ -6,7 +6,7 @@
 #    By: maheiden <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/23 15:44:29 by maheiden          #+#    #+#              #
-#    Updated: 2018/11/24 20:40:22 by maheiden         ###   ########.fr        #
+#    Updated: 2018/11/24 22:44:54 by maheiden         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,8 @@ SRC = ft_bzero.c \
 	   ft_strrchr.c \
 	   ft_strstr.c \
 	   ft_strcmp.c \
+	   ft_strnstr.c \
+	   ft_strncmp.c \
 
 OBJ = $(SRC:.c=.o)
 

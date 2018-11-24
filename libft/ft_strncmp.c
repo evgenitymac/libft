@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maheiden <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/24 19:55:08 by maheiden          #+#    #+#             */
-/*   Updated: 2018/11/24 23:43:03 by maheiden         ###   ########.fr       */
+/*   Created: 2018/11/24 22:42:14 by maheiden          #+#    #+#             */
+/*   Updated: 2018/11/24 23:33:04 by maheiden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(const char *haystack, const char *needle)
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char	*large;
-	char	*small;
-	size_t	i;
+	size_t			i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
-	large = (char *)haystack;
-	small = (char *)needle;
 	i = 0;
-	if (ft_strlen(small) == 0)
-		return (large);
-	if (ft_strlen(small) > ft_strlen(large))
-		return (NULL);
-	while (large[i])
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	if (str1[i] == '\0')
+		return (str1[i] - str2[i]);
+	while (str1[i] && n--)
 	{
-		if (ft_strcmp(small, &large[i]) == 0)
-			return (&large[i]);
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
