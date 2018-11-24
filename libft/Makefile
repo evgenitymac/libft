@@ -1,0 +1,51 @@
+#**************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: maheiden <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/11/23 15:44:29 by maheiden          #+#    #+#              #
+#    Updated: 2018/11/24 20:40:22 by maheiden         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+FLAG = -Wall -Werror -Wextra
+
+NAME = libft.a
+
+SRC = ft_bzero.c \
+	   ft_memcpy.c \
+	   ft_memchr.c \
+	   ft_memccpy.c \
+	   ft_memmove.c \
+	   ft_memset.c \
+	   ft_memcmp.c \
+	   ft_strlen.c \
+	   ft_strdup.c \
+	   ft_strcpy.c \
+	   ft_strncpy.c \
+	   ft_strcat.c \
+	   ft_strncat.c \
+	   ft_strlcat.c \
+	   ft_strchr.c \
+	   ft_strrchr.c \
+	   ft_strstr.c \
+	   ft_strcmp.c \
+
+OBJ = $(SRC:.c=.o)
+
+all: $(NAME)
+
+$(NAME): 
+		gcc -c $(FLAG) $(SRC) -I.
+		ar rc $(NAME) $(OBJ)
+		ranlib $(NAME)
+
+clean:
+	rm -f $(OBJ)
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all
