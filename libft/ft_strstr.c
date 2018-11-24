@@ -6,7 +6,7 @@
 /*   By: maheiden <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/24 19:55:08 by maheiden          #+#    #+#             */
-/*   Updated: 2018/11/24 23:43:03 by maheiden         ###   ########.fr       */
+/*   Updated: 2018/11/24 23:45:57 by maheiden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	i = 0;
 	if (ft_strlen(small) == 0)
 		return (large);
-	if (ft_strlen(small) > ft_strlen(large))
-		return (NULL);
 	while (large[i])
 	{
 		if (ft_strcmp(small, &large[i]) == 0)

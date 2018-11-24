@@ -6,7 +6,7 @@
 /*   By: maheiden <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/24 19:44:30 by maheiden          #+#    #+#             */
-/*   Updated: 2018/11/24 19:55:10 by maheiden         ###   ########.fr       */
+/*   Updated: 2018/11/25 01:10:40 by maheiden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*ft_strrchr(const char *s, int c)
 	char	*str;
 
 	first = 0;
-	last = ft_strlen(s);
 	str = (char *)s;
+	last = ft_strlen(str);
 	while (last > first)
 	{
 		if (str[last] == c)

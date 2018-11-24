@@ -6,7 +6,7 @@
 /*   By: maheiden <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 16:26:21 by maheiden          #+#    #+#             */
-/*   Updated: 2018/11/24 14:38:16 by maheiden         ###   ########.fr       */
+/*   Updated: 2018/11/25 00:47:08 by maheiden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	if (chr_src > chr_dst)
 	{
-		ft_memcpy(dst,src,len);
-	} 
+		ft_memcpy(dst, src, len);
+	}
 	else if (chr_src < chr_dst)
 		while (len--)
 			chr_dst[len] = chr_src[len];
