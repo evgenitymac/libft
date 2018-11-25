@@ -6,7 +6,7 @@
 #    By: maheiden <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/23 15:44:29 by maheiden          #+#    #+#              #
-#    Updated: 2018/11/24 22:44:54 by maheiden         ###   ########.fr        #
+#    Updated: 2018/11/25 23:05:49 by maheiden         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,13 @@ SRC = ft_bzero.c \
 	   ft_isdigit.c \
 	   ft_isalnum.c \
 	   ft_isascii.c \
+	   ft_isprint.c \
+	   ft_toupper.c \
+	   ft_tolower.c \
+	   ft_putchar.c \
+	   ft_putstr.c \
+	   ft_putendl.c \
+	   ft_putnbr.c \
 
 OBJ = $(SRC:.c=.o)
 

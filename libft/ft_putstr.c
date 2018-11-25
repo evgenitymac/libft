@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maheiden <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/25 20:13:28 by maheiden          #+#    #+#             */
-/*   Updated: 2018/11/25 20:43:45 by maheiden         ###   ########.fr       */
+/*   Created: 2018/11/25 21:42:17 by maheiden          #+#    #+#             */
+/*   Updated: 2018/11/25 21:44:37 by maheiden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+void	ft_putstr(char const *s)
 {
-	unsigned char symb;
-
-	symb = (unsigned char)c;
-	if ((symb >= 'A' && symb <= 'Z') || (symb >= 'a' && symb <= 'z'))
-		return (1);
-	return (0);
+	write(1, s, ft_strlen(s));
 }

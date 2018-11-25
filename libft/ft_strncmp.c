@@ -6,7 +6,7 @@
 /*   By: maheiden <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/24 22:42:14 by maheiden          #+#    #+#             */
-/*   Updated: 2018/11/25 02:08:23 by maheiden         ###   ########.fr       */
+/*   Updated: 2018/11/25 20:13:18 by maheiden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 			return (str1[i] - str2[i]);
 		i++;
 		n--;
-	}	
+	}
 	if (str1[i] == '\0')
 		return (str1[i] - str2[i]);
 	return (0);

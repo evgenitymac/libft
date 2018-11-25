@@ -1,23 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maheiden <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/25 20:13:28 by maheiden          #+#    #+#             */
-/*   Updated: 2018/11/25 20:43:45 by maheiden         ###   ########.fr       */
+/*   Created: 2018/11/25 22:24:20 by maheiden          #+#    #+#             */
+/*   Updated: 2018/11/25 23:13:29 by maheiden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+void	ft_putnbr(int n)
 {
-	unsigned char symb;
-
-	symb = (unsigned char)c;
-	if ((symb >= 'A' && symb <= 'Z') || (symb >= 'a' && symb <= 'z'))
-		return (1);
-	return (0);
+	//-2147483648LL
+	if (n == -2147483648)
+	{
+		ft_putchar('-');
+		ft_putchar('2');
+		ft_putnbr(147483648);
+	}
+	if (n < 0)
+	{
+		ft_putchar('-');
+		n *= -1;
+	}
+	if (n >= 10)
+	{
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
+	}
+	else
+	{
+		ft_putchar('0' + n);
+	}
 }
