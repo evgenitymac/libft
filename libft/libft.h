@@ -6,7 +6,7 @@
 /*   By: maheiden <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 16:29:08 by maheiden          #+#    #+#             */
-/*   Updated: 2018/11/26 17:14:04 by maheiden         ###   ########.fr       */
+/*   Updated: 2018/11/26 22:20:10 by maheiden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,13 @@
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
+
+typedef struct		s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct	s_list	*next;
+}					t_list;
 
 void	ft_bzero(void *s, size_t n);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
@@ -49,5 +56,12 @@ void	ft_putchar(char c);
 void	ft_putstr(char const *s);
 void	ft_putendl(char const *s);
 void	ft_putnbr(int n);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_putendl_fd(char const *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+t_list 	*ft_lstnew(void const *content, size_t content_size);
+void	*ft_memalloc(size_t size);
+void	ft_memdel(void **ap);
 
 #endif

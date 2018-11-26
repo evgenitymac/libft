@@ -6,7 +6,7 @@
 #    By: maheiden <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/23 15:44:29 by maheiden          #+#    #+#              #
-#    Updated: 2018/11/25 23:05:49 by maheiden         ###   ########.fr        #
+#    Updated: 2018/11/26 22:19:38 by maheiden         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,12 @@ SRC = ft_bzero.c \
 	   ft_putstr.c \
 	   ft_putendl.c \
 	   ft_putnbr.c \
+	   ft_putchar_fd.c \
+	   ft_putstr_fd.c \
+	   ft_putendl_fd.c \
+	   ft_putnbr_fd.c \
+	   ft_memalloc.c \
+	   ft_memdel.c \
 
 OBJ = $(SRC:.c=.o)
 
