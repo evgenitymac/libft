@@ -51,6 +51,19 @@ SRC = ft_bzero.c \
 	   ft_putnbr_fd.c \
 	   ft_memalloc.c \
 	   ft_memdel.c \
+	   ft_strnew.c \
+	   ft_strdel.c \
+	   ft_strclr.c \
+	   ft_lstnew.c \
+	   ft_lstdelone.c \
+           ft_lstdel.c \
+	   ft_lstadd.c \
+	   ft_striter.c \
+	   ft_striteri.c \
+	   ft_strmap.c \
+	   ft_strmapi.c \
+	   ft_strequ.c \
+	   ft_strnequ.c \
 
 OBJ = $(SRC:.c=.o)
 
