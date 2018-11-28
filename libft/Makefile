@@ -6,7 +6,7 @@
 #    By: maheiden <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/23 15:44:29 by maheiden          #+#    #+#              #
-#    Updated: 2018/11/26 22:19:38 by maheiden         ###   ########.fr        #
+#    Updated: 2018/11/28 19:40:26 by maheiden         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,7 +56,7 @@ SRC = ft_bzero.c \
 	   ft_strclr.c \
 	   ft_lstnew.c \
 	   ft_lstdelone.c \
-           ft_lstdel.c \
+       ft_lstdel.c \
 	   ft_lstadd.c \
 	   ft_striter.c \
 	   ft_striteri.c \
@@ -64,6 +64,9 @@ SRC = ft_bzero.c \
 	   ft_strmapi.c \
 	   ft_strequ.c \
 	   ft_strnequ.c \
+	   ft_strsub.c \
+	   ft_strjoin.c \
+	   ft_strtrim.c \
 
 OBJ = $(SRC:.c=.o)
 

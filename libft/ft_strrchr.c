@@ -6,7 +6,7 @@
 /*   By: maheiden <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/24 19:44:30 by maheiden          #+#    #+#             */
-/*   Updated: 2018/11/26 16:28:20 by maheiden         ###   ########.fr       */
+/*   Updated: 2018/11/28 16:42:38 by maheiden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,7 @@ char	*ft_strrchr(const char *s, int c)
 		if (str[last] == c)
 			return (&str[last]);
 	}
-	return (0);
+	return (NULL);
 }
+
+
