@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maheiden <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/28 13:42:36 by maheiden          #+#    #+#             */
+/*   Updated: 2018/11/28 13:42:44 by maheiden         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char		*mal_str;
+	char			*mal_str;
 	unsigned int	i;
-	
+
 	mal_str = ft_strdup(s);
 	i = 0;
 	while (s[i] && f)

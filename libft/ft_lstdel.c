@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maheiden <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/28 13:48:07 by maheiden          #+#    #+#             */
+/*   Updated: 2018/11/28 13:50:59 by maheiden         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
 	t_list *object;
-	
+
 	if (alst && del)
 	{
 		while (*alst)
@@ -14,6 +26,5 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 			*alst = NULL;
 			*alst = object;
 		}
-	//	??*alst = NULL;
 	}
 }
