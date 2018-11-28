@@ -26,15 +26,16 @@ char	*ft_strtrim(char const *s)
 	while (s[start] == ' ' || s[start] == '\n' || s[start] == '\t')
 		start++;
 	while (s[end] == ' ' || s[end] == '\n' || s[end] == '\t')
-		end++;
-	if (!(str = ft_strnew(start - end)))
+		end--;
+	if (!(str = ft_strnew(end - start)))
 		return (NULL);
 	while (start < end)
 	{
-		str[i] = str[start];
+		str[i] = s[start];
 		i++;
 		start++;
 	}
 	return (str);
 }
+
 
