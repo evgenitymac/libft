@@ -6,7 +6,7 @@
 /*   By: maheiden <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 19:02:30 by maheiden          #+#    #+#             */
-/*   Updated: 2018/11/30 21:56:07 by maheiden         ###   ########.fr       */
+/*   Updated: 2018/12/01 22:03:34 by maheiden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,29 @@
 
 char	*ft_itoa(int n)
 {
-	int 	count;
-	int		cache;
+	int		count;
 	char	*str;
 	int		i;
 
-	cache = n;
 	count = ft_need_for_int_to_str(n);
 	i = 0;
 	if (!(str = ft_strnew(count)))
 		return (NULL);
-	while (count - 1)
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	if (n < 0)
 	{
-		str[i] = '0' + cache / 10 * count;
-		cache = cache % count * 10;
+		str[i] = '-';
+		i++;
+		n *= -1;
 		count--;
 	}
+	while (count)
+	{
+		count--;
+		str[i] = '0' + n / ft_pow_int(10, count);
+		n = n % ft_pow_int(10, count);
+		i++;
+	}
 	return (str);
-}
-
-int main()
-{
-	ft_itoa(1245);
-	return (0);
 }

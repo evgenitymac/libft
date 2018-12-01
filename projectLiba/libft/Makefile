@@ -6,7 +6,7 @@
 #    By: maheiden <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/23 15:44:29 by maheiden          #+#    #+#              #
-#    Updated: 2018/11/30 20:35:37 by maheiden         ###   ########.fr        #
+#    Updated: 2018/12/01 22:35:18 by maheiden         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,9 @@ SRC = ft_bzero.c \
 	   ft_strtrim.c \
 	   ft_atoi.c \
 	   ft_lstiter.c \
-	   ft_need_for_int_to_str \
+	   ft_need_for_int_to_str.c \
+	   ft_pow_int.c \
+	   ft_itoa.c \
 
 OBJ = $(SRC:.c=.o)
 

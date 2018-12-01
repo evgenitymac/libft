@@ -1,30 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maheiden <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/28 13:48:07 by maheiden          #+#    #+#             */
-/*   Updated: 2018/12/01 22:18:43 by maheiden         ###   ########.fr       */
+/*   Created: 2018/12/01 22:38:34 by maheiden          #+#    #+#             */
+/*   Updated: 2018/12/01 22:57:33 by maheiden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+char	**ft_strsplit(char const *s, char c)
 {
-	t_list *object;
-
-	if (alst && del)
-	{
-		while (*alst)
-		{
-			object = (*alst)->next;
-			del((*alst)->content, (*alst)->content_size);
-			free(*alst);
-			*alst = NULL;
-			*alst = object;
-		}
-	}
+	
 }

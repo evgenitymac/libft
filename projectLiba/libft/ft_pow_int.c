@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   ft_pow_int.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maheiden <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/28 13:48:07 by maheiden          #+#    #+#             */
-/*   Updated: 2018/12/01 22:18:43 by maheiden         ###   ########.fr       */
+/*   Created: 2018/12/01 18:48:44 by maheiden          #+#    #+#             */
+/*   Updated: 2018/12/01 21:06:21 by maheiden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+int		ft_pow_int(int x, int y)
 {
-	t_list *object;
+	int cache;
 
-	if (alst && del)
+	if (y == 0)
+		return (1);
+	cache = ft_pow_int(x, y / 2);
+	if ((y % 2) == 0)
+		return (cache * cache);
+	else
 	{
-		while (*alst)
-		{
-			object = (*alst)->next;
-			del((*alst)->content, (*alst)->content_size);
-			free(*alst);
-			*alst = NULL;
-			*alst = object;
-		}
+		if (y > 0)
+			return (x * cache * cache);
+		else
+			return ((cache * cache) / x);
 	}
+	ft_putstr("error");
+	return (0);
 }
